@@ -1,0 +1,142 @@
+#wt-zone-header {
+	display: none;
+}
+
+#wt-zone-main-wrapper {
+	max-width: 100%;
+}
+
+html, body, #app {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background: none;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.container {
+	height: 100%;
+	
+	.header {
+		background-color: #045894;
+		height: 82px;
+		
+		.header__wrapper {
+			width: 52%;
+			margin: 0 auto;
+			padding-top: 18px;
+			
+			.header__site{
+				color: #fff;
+				font-size: 2.4em;
+			}
+			.header__enter{
+				float: right;
+				padding: 12px;
+    			border-radius: 4px;
+    			font-size: 0.9em;
+			}
+		}
+	}
+	.body {
+		height: 100%;
+		width: 52%;
+		margin: 48px auto;
+		position: relative;
+		
+		.body__description{
+			max-width: 500px;
+			float: left;
+			color: #333;
+		}
+		
+		.body__img{
+			background-image: url(../images/learn.jpg);
+			width: 500px;
+		    height: 500px;
+		    background-size: cover;
+		}
+	
+		.authorization-container{
+			max-width: 400px;
+			float: right;
+			/* position: absolute;
+		    top: 30%;
+		    left: 75%;
+		    transform: translate(-50%, -50%);
+		    width: 650px;
+		    height: 650px;
+		    border-radius: 50%;
+		    border: 10px solid #ff5252; */
+			
+			.authorization {
+				/* position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translate(-50%, -50%);
+			    width: 300px; */
+			    
+			    .authorization__lastname {
+			    	float: left;
+			    	width: 190px;
+			    	margin-right: 16px;
+			    }
+			    
+			    .authorization__name {
+			    	float: right;
+			    	width: 190px;	
+			    }
+			    
+			    .authorization__middlename{
+			    	margin-bottom: 24px;
+			    }
+			    
+			    .authorization__date{
+			    	color: #333;
+			    	
+			    	.authorization__icon-calendar{
+			    		
+			    		margin-right: 5px;
+			    	}
+			    	
+			    	.authorization__number{
+				    	width: 64px;
+				    	float: right;
+				    }
+				    
+				    .authorization__month{
+				    	width: 90px;
+				    	float: right;
+				    	margin-right: 8px;
+				    }
+			    }
+			    
+			    .authorization__password-description{
+			    	margin-top: 36px;
+			    }
+			    
+			    
+			    .input {
+			    	background-color: #8BC34A;
+			    }
+			}
+			.authorization-container__register{
+				padding: 12px;
+    			border-radius: 4px;
+    			font-size: 0.9em;
+    			margin-top: 50px;
+			}
+		}
+	}
+	.footer {
+		
+	}
+}
+
+
