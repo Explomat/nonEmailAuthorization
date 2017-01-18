@@ -1,8 +1,8 @@
-import constants from '../constants/constants';
+import constants from '../constants';
 import { setSuccess, setFailure } from './utils/setState';
 import assign from 'lodash/assign';
 
-export default function app(state = {
+export default function register(state = {
 	lastname: '',
 	firstname: '',
 	middlename: '',
@@ -18,6 +18,10 @@ export default function app(state = {
 			const _newState = assign({}, state);
 			delete _newState['error'];
 			return _newState;
+		case constants.CLEAR_MESSAGE:
+			const _state = assign({}, state);
+			delete _state['message'];
+			return _state;
 		
 		case constants.CHANGE_LAST_NAME:
 			return assign({}, state, { lastname: action.value });
@@ -45,7 +49,7 @@ export default function app(state = {
 		case constants.REGISTER_REQUEST_FAILURE:
 			return setFailure(state, action.error, 'error', 'isFetching');
 		case constants.REGISTER_REQUEST_SUCCESS:
-			return setSuccess(state, action.response, 'error', 'isFetching');
+			return assign(setSuccess(state, action.response, 'error', 'isFetching'), {message: "Вы успешно зарегистрировались! Нажмите на кнопку 'Войти если зарегистрированны'"});
 		default:
 			return state;
 	}

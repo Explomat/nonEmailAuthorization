@@ -1,5 +1,6 @@
 import '../style/common.scss';
 import '../style/authorization.scss';
+import '../style/password-remind.scss';
 
 import '../style/icon-font.css';
 import '../fonts/icon-font.eot';

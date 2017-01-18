@@ -54,18 +54,25 @@ h1 {
 			max-width: 500px;
 			float: left;
 			color: #333;
+			
+			.body__description-text{
+				margin-top: 0;
+			}
+			
+			.body__img{
+				background-image: url(../images/learn.jpg);
+				width: 500px;
+			    height: 500px;
+			    background-size: cover;
+			}
 		}
 		
-		.body__img{
-			background-image: url(../images/learn.jpg);
-			width: 500px;
-		    height: 500px;
-		    background-size: cover;
+		.body__content{
+			max-width: 400px;
+			float: right;
 		}
 	
 		.authorization-container{
-			max-width: 400px;
-			float: right;
 			/* position: absolute;
 		    top: 30%;
 		    left: 75%;
@@ -126,11 +133,19 @@ h1 {
 			    	background-color: #8BC34A;
 			    }
 			}
-			.authorization-container__register{
-				padding: 12px;
-    			border-radius: 4px;
-    			font-size: 0.9em;
-    			margin-top: 50px;
+			.authorization-container__buttons {
+				margin-top: 50px;
+				
+				.authorization-container__register{
+					padding: 12px;
+	    			border-radius: 4px;
+	    			font-size: 0.9em;
+				}
+				
+				.authorization-container__remind-password{
+					margin-left: 36px;
+					text-decoration: none;
+				}
 			}
 		}
 	}

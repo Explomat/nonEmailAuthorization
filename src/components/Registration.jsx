@@ -1,17 +1,19 @@
 import React, { PropTypes } from 'react';
+import { Link } from 'react-router'
 import {TextView} from './modules/text-label';
 import {ButtonPrimary} from './modules/button';
 import DropDown from './modules/dropdown';
-import {AlertDanger, AlertWarning} from './modules/alert';
+import {AlertDanger, AlertWarning, AlertInfo} from './modules/alert';
 
-import {validateEmail, validatePassword, validateOnlyCirilicSymbols} from '../utils/validate';
+import {validateEmail, validatePassword, validateLogin} from '../utils/validate';
 
-const Authorization = ({ ...props }) => {
-	const {error, lastname, firstname, middlename, dateMonth, dateNumber, email, login, password, confirmPassword} = props;
+const Registration = ({ ...props }) => {
+	const {error, message, lastname, firstname, middlename, dateMonth, dateNumber, email, login, password, confirmPassword} = props;
 	
 	return (
 		<div className="authorization-container">
 			{error && <AlertDanger text={error} onClose={props.clearError} />}
+			{message && <AlertInfo text={message} onClose={props.clearMessage} />}
 			<div className="authorization">
 				<div className="clearfix">
 					<TextView
@@ -112,7 +114,7 @@ const Authorization = ({ ...props }) => {
 					onBlur={props.changeLogin} 
 					placeholder="Логин" 
 					className="authorization__login"
-					isValid={validateOnlyCirilicSymbols}/>
+					isValid={validateLogin}/>
 				<AlertWarning 
 					text="Пароль не должен содержать знаки препинания и другие символы. Минимальная длина пароля 8 символов. Также он должен содержать минимум одну цифру, одну маленькую букву и одну заглавную."
 					className="authorization__password-description" />
@@ -131,12 +133,15 @@ const Authorization = ({ ...props }) => {
 					className="authorization__confirm-password"
 					isValid={val => { return (validatePassword(val) && val === password) }}/>
 			</div>
-			<ButtonPrimary
-				onClick={props.register}
-				text="Зарегистрироваться" 
-				className="authorization-container__register"/>
+			<div className="authorization-container__buttons">
+				<ButtonPrimary
+					onClick={props.register}
+					text="Зарегистрироваться" 
+					className="authorization-container__register"/>
+				<Link to='password-remind' className="authorization-container__remind-password">Забыли пароль?</Link>
+			</div>
 		</div>
 	)
 }
 
-export default Authorization;
+export default Registration;

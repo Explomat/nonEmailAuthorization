@@ -1,13 +1,14 @@
 import { addServer, getAll } from  './servers';
 import env from './env';
 
-const routerId = '6238833803725312131';
+const routerId = '6376855563539274986';
 const customBaseUrl = env === 'production' ? '/custom_web_template.html' : 'https://study.merlion.ru/custom_web_template.html';
 
 addServer({ id: '6376574714749612076', name: 'Test' })
 .addActions(
 	[
-		'register'
+		'register',
+		'remind'
 	]
 );
 

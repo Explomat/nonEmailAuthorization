@@ -8,6 +8,13 @@ export function clearError(){
 	}
 }
 
+export function clearMessage(){
+	return {
+		type: constants.CLEAR_MESSAGE
+	}
+}
+
+
 export function changeLastname(value){
 	return {
 		type: constants.CHANGE_LAST_NAME,
@@ -92,8 +99,8 @@ function errorRegister(error){
 	};
 }
 
-function isNotFilled(state){
-	const { lastname, firstname, middlename, dateMonth, dateNumber, email, login, password, confirmPassword } = state;
+function isNotFilled({register}){
+	const { lastname, firstname, middlename, dateMonth, dateNumber, email, login, password, confirmPassword } = register;
 	return !lastname || !firstname || !middlename || (dateMonth === 0) || (dateNumber === 0) || !email || !login || !password || !confirmPassword;
 }
 
@@ -105,8 +112,9 @@ export function register(){
 		}
 		
 		dispatch(registerRequest());
-
-		post(config.url.createPath({server_name: 'Test', action_name: 'register'}), JSON.stringify(getState()))
+		
+		const {register} = getState();
+		post(config.url.createPath({server_name: 'Test', action_name: 'register'}), JSON.stringify(register))
 		.then(resp => JSON.parse(resp))
 		.then(resp => {
 			if (resp.error){

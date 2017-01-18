@@ -15,7 +15,7 @@ export function validatePassword(password){
 	return re.test(password);
 }
 
-export function validateOnlyCirilicSymbols(str){
-	var re = /^[a-zA-Z]+$/;
+export function validateLogin(str){
+	var re = /^[a-zA-Z0-9]+$/;
 	return re.test(str);
 }
