@@ -12,7 +12,7 @@ const PasswordRemind = ({ ...props }) => {
 			{error && <AlertDanger text={error} onClose={props.clearError} />}
 			{message && <AlertInfo text={message} onClose={props.clearMessage} />}
 			<AlertInfo 
-				text="Введите почту при регистрации, на которую мы вышлем Вам ваш пароль"
+				text="Введите почту, указанную при регистрации, на которую мы вышлем Вам ваш пароль"
 				className="password-remind__warning" />
 			<TextView
 				value={email}

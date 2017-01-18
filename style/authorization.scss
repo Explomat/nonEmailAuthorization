@@ -42,10 +42,18 @@ h1 {
     			border-radius: 4px;
     			font-size: 0.9em;
 			}
+			.header__enter-link{
+				color: #fff;
+				text-decoration: none;
+				
+				&:focus, &:hover, &:active {
+			        color: #fff;
+			        text-decoration: none;
+			    }
+			}
 		}
 	}
 	.body {
-		height: 100%;
 		width: 52%;
 		margin: 48px auto;
 		position: relative;
@@ -93,19 +101,22 @@ h1 {
 			    	float: left;
 			    	width: 190px;
 			    	margin-right: 16px;
+			    	margin-bottom: 16px;
 			    }
 			    
 			    .authorization__name {
 			    	float: right;
-			    	width: 190px;	
+			    	width: 190px;
+			    	margin-bottom: 16px;
 			    }
 			    
 			    .authorization__middlename{
-			    	margin-bottom: 24px;
+			    	margin-bottom: 16px;
 			    }
 			    
 			    .authorization__date{
 			    	color: #333;
+			    	margin-bottom: 16px;
 			    	
 			    	.authorization__icon-calendar{
 			    		
@@ -124,10 +135,17 @@ h1 {
 				    }
 			    }
 			    
-			    .authorization__password-description{
-			    	margin-top: 36px;
+			    .authorization__email{
+			    	margin-bottom: 16px;
 			    }
 			    
+			    .authorization__login{
+			    	margin-bottom: 16px;
+			    }
+			    
+			    .authorization__password{
+			    	margin-bottom: 16px;
+			    }
 			    
 			    .input {
 			    	background-color: #8BC34A;

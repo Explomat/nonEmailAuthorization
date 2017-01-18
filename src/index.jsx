@@ -22,7 +22,7 @@ ReactDOM.render(
 	<Provider store={store}>
 		<Router history={hashHistory}>
 			<Route path="/" component={App}>
-				<Route path="registration" component={RegistrationContainer} />
+				<IndexRoute component={RegistrationContainer} />
 				<Route path="password-remind" component={PasswordRemindContainer} />
 			</Route>
 		</Router>
