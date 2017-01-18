@@ -117,7 +117,8 @@ const Registration = ({ ...props }) => {
 					isValid={validateLogin}/>
 				<AlertWarning 
 					text="Пароль не должен содержать знаки препинания и другие символы. Минимальная длина пароля 8 символов. Также он должен содержать минимум одну цифру, одну маленькую букву и одну заглавную."
-					className="authorization__password-description" />
+					className="authorization__password-description"
+					isClose={false} />
 				<TextView
 					type="password"
 					value={password}

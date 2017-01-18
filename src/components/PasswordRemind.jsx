@@ -13,7 +13,8 @@ const PasswordRemind = ({ ...props }) => {
 			{message && <AlertInfo text={message} onClose={props.clearMessage} />}
 			<AlertInfo 
 				text="Введите почту, указанную при регистрации, на которую мы вышлем Вам ваш пароль"
-				className="password-remind__warning" />
+				className="password-remind__warning"
+				isClose={false} />
 			<TextView
 				value={email}
 				onBlur={props.changeEmail}
