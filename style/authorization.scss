@@ -6,10 +6,6 @@
 	max-width: 100%;
 }
 
-html, body, #app {
-	height: 100%;
-}
-
 body {
 	margin: 0;
 	background: none;
@@ -21,8 +17,6 @@ h1 {
 }
 
 .container {
-	height: 100%;
-	
 	.header {
 		background-color: #045894;
 		height: 82px;

@@ -18,7 +18,7 @@ const App = ({ ...props }) => {
 					</ButtonSuccess>
 				</div>
 			</div>
-			<div className="body">
+			<div className="body clearfix">
 				<div className="body__description">
 					<h1 className="body__description-text">Регистрация нового пользователя!</h1>
 					<div className="body__img"></div>

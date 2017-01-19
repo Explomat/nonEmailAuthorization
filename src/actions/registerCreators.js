@@ -120,7 +120,8 @@ export function register(){
 			if (resp.error){
 				dispatch(errorRegister(resp.error));
 			} else {
-				dispatch(receiveRegister(resp));
+				window.location = "/view_doc.html?mode=home";
+				//dispatch(receiveRegister(resp));
 			}
 		})
 		.catch(e => {
